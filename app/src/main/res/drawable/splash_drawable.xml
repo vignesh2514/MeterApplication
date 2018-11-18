@@ -2,11 +2,11 @@
     <!-- The background color, preferably the same as your normal theme -->
     <item
 
-            android:drawable="@color/colorPrimary"/>
+            android:drawable="@android:color/white"/>
     <!-- Your product logo - 144dp color version of your app icon -->
-    <!--<item>-->
-        <!--&lt;!&ndash;<bitmap&ndash;&gt;-->
-                <!--&lt;!&ndash;android:src="@color/colorPrimary"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:gravity="center"/>&ndash;&gt;-->
-    <!--</item>-->
+    <item>
+        <bitmap
+                android:src="@drawable/applogo_150"
+                android:gravity="center"/>
+    </item>
 </layer-list>

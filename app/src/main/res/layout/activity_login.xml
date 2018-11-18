@@ -7,4 +7,51 @@
         android:layout_height="match_parent"
         tools:context=".userinterface.authentication.Login">
 
+    <ImageView
+            android:src="@drawable/applogo_150"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/imageView" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="52dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:ems="10"
+         android:maxLength="10"
+            android:id="@+id/EtMobileNumber"
+            style="@style/EdittextTheme"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintHorizontal_bias="0.503"
+            android:singleLine="true" android:hint="Enter Your Mobile NUmber"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/EtPassword"
+            style="@style/EdittextTheme"
+            app:layout_constraintStart_toStartOf="@+id/EtMobileNumber"
+            app:layout_constraintEnd_toEndOf="@+id/EtMobileNumber"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/EtMobileNumber"
+            android:hint="Enter your Password"/>
+    <Button
+            android:text="Login"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            style="@style/ButtongrennTheme"
+            android:id="@+id/Blogin" app:layout_constraintStart_toStartOf="@+id/EtPassword"
+            app:layout_constraintEnd_toEndOf="@+id/EtPassword" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/EtPassword"/>
+    <TextView
+            android:text="Don`t have an account ! Sign Up?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_normal"
+            android:id="@+id/textView" app:layout_constraintStart_toStartOf="@+id/Blogin"
+            app:layout_constraintEnd_toEndOf="@+id/Blogin" android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="64dp" app:layout_constraintTop_toBottomOf="@+id/Blogin"/>
 </android.support.constraint.ConstraintLayout>

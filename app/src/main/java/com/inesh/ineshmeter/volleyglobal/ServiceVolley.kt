@@ -13,7 +13,7 @@ import org.json.JSONObject
 //service request
 class ServiceVolley : ServiceInterface {
     val TAG = ServiceVolley::class.java.simpleName
-val basepath="https://accounts-dev.oicapps.com/api/v1/"
+val basepath="http://smarte.co.in/dinesh_testing/"
 
     override fun post(path: String, params: JSONObject, completionHandler: (response: JSONObject?) -> Unit) {
         val jsonObjReq = object : JsonObjectRequest(Method.POST, basepath+ path, params,
