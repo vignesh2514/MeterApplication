@@ -13,7 +13,7 @@ import org.json.JSONObject
 //service request
 class ServiceVolley : ServiceInterface {
     val TAG = ServiceVolley::class.java.simpleName
-val basepath="http://smarte.co.in/dinesh_testing/"
+val basepath="http://www.smarte.co.in/dinesh_testing/"
 
     override fun post(path: String, params: JSONObject, completionHandler: (response: JSONObject?) -> Unit) {
         val jsonObjReq = object : JsonObjectRequest(Method.POST, basepath+ path, params,
@@ -36,8 +36,7 @@ val basepath="http://smarte.co.in/dinesh_testing/"
 
             override fun getHeaders(): Map<String, String> {
                 val headers = HashMap<String, String>()
-                headers["Content-Type"] = "application/x-www-form-urlencoded"
-
+                headers["Content-Type"] = "application/json"
                 return headers
             }
         }
@@ -67,7 +66,7 @@ val basepath="http://smarte.co.in/dinesh_testing/"
 
             override fun getHeaders(): Map<String, String> {
                 val headers = HashMap<String, String>()
-                headers["Content-Type"] = "application/x-www-form-urlencoded"
+                headers["Content-Type"] = "application/json"
                 return headers
             }
         }
@@ -97,8 +96,7 @@ val basepath="http://smarte.co.in/dinesh_testing/"
 
             override fun getHeaders(): Map<String, String> {
                 val headers = HashMap<String, String>()
-                headers["Content-Type"] = "application/x-www-form-urlencoded"
-
+                headers["Content-Type"] = "application/json"
                 return headers
             }
         }

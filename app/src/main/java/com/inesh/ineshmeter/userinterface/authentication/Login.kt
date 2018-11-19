@@ -1,6 +1,7 @@
 package com.inesh.ineshmeter.userinterface.authentication
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import com.inesh.ineshmeter.R
@@ -19,7 +20,11 @@ class Login : Activity() {
         setContentView(R.layout.activity_login)
         Blogin.setOnClickListener {
 
-startapicall(EtMobileNumber.toString(),EtPassword.toString())
+startapicall(EtMobileNumber.text.toString(),EtPassword.text.toString())
+        }
+
+        TvSignup.setOnClickListener {
+            startActivity(Intent(this@Login, SignUp::class.java))
         }
     }
 
