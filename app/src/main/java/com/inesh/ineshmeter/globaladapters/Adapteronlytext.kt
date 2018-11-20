@@ -50,6 +50,19 @@ class Adapteronlytext  (private val partItemList: List<ListTextOnly>, private va
             itemView.tv_list_text.text = part.itemName
             itemView.tv_list_text_id.text = part.id.toString()
             itemView.tv_list_subtext.text=part.itemSubName
+if (itemView.tv_list_subtext.text.contains("Active"))
+{
+    itemView.layout_back_text.setBackgroundResource(R.drawable.button_fill)
+    itemView.tv_list_text.setTextColor(Color.WHITE)
+                    itemView.tv_list_subtext.setTextColor(Color.WHITE)
+}
+            else
+{
+    itemView.layout_back_text.setBackgroundResource(R.drawable.editext_round_white)
+                       itemView.tv_list_text.setTextColor(Color.BLACK)
+                    itemView.tv_list_subtext.setTextColor(Color.BLACK)
+}
+
 
 //            if (selectedItems != null && selectedItems.size() > 0) {
 //

@@ -36,6 +36,11 @@ class SignUp : Activity() {
 
             }
         }
+
+        Tvlogin.setOnClickListener {
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun startsignupapicall(name: String, mobilenum: String, pass: String, meternumber: String,email: String) {

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+            tools:context=".userinterface.displayfragment.MeterDetails">
+
+<LinearLayout android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="10dp"
+    >
+
+
+        <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:weightSum="2"
+                          android:layout_height="80dp">
+
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_solar_energy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageView5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".2" android:contentDescription="TODO"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1.8"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="System RTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16sp"
+
+                />
+                <TextView
+                        android:text="Loading..."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/TvSysRtc" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                />
+            </LinearLayout>
+            </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="10dp"
+    >
+
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:weightSum="2"
+                android:layout_height="80dp">
+
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_solar_energy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/mdi2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".2" android:contentDescription="TODO"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1.8"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="Meter RTC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mdt2" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16sp"
+
+                />
+                <TextView
+                        android:text="Loading..."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/TvMeterRtc" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="10dp"
+    >
+
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:weightSum="2"
+                android:layout_height="80dp">
+
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_solar_energy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/mdi3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".2" android:contentDescription="TODO"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1.8"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="Ist Voltage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mdt3" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16sp"
+
+                />
+                <TextView
+                        android:text="Loading..."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/TvIstV" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="10dp"
+    >
+
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:weightSum="2"
+                android:layout_height="80dp">
+
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_solar_energy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/mdi4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".2" android:contentDescription="TODO"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1.8"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="Ist Current"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mdt4" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16sp"
+
+                />
+                <TextView
+                        android:text="Loading..."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/TvIstC" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="10dp"
+    >
+
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:weightSum="2"
+                android:layout_height="80dp">
+
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_solar_energy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/mdi5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".2" android:contentDescription="TODO"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1.8"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="Kw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mdt5" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16sp"
+
+                />
+                <TextView
+                        android:text="Loading..."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/TvKw" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="10dp"
+    >
+
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:weightSum="2"
+                android:layout_height="80dp">
+
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_solar_energy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/mdi6"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".2" android:contentDescription="TODO"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1.8"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="Kwh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mdt6" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="16sp"
+
+                />
+                <TextView
+                        android:text="Loading..."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/TvKwh" android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+</ScrollView>

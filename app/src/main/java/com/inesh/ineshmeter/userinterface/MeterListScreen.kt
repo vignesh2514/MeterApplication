@@ -1,6 +1,7 @@
 package com.inesh.ineshmeter.userinterface
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import com.inesh.ineshmeter.globaladapters.Adapteronlytext
 import com.inesh.ineshmeter.globalclass.SharedPrefUtils
 import com.inesh.ineshmeter.listclass.ListTextOnly
 import com.inesh.ineshmeter.userinterface.authentication.Login
-import com.inesh.ineshmeter.userinterface.authentication.OtpScreen
+import com.inesh.ineshmeter.userinterface.displayfragment.MasterPage
 import com.inesh.ineshmeter.volleyglobal.APIController
 import com.inesh.ineshmeter.volleyglobal.ServiceVolley
 
@@ -67,6 +68,17 @@ class MeterListScreen : AppCompatActivity() {
 //
 //}
 
+        fab.setOnClickListener {
+
+            val mailto = "mailto:dineshdj287@gmail.com" +
+                    "?cc=" + "dinesh@ineshenergy.com" +
+                    "&subject= " + Uri.encode("Add My Meter Number Android Application - Reg") +
+                    "&body=" + Uri.encode("I am ${SharedPrefUtils.getuserName()} My Mobile Number is: ${SharedPrefUtils.getmobileNumber()}  add my Meter Number :")
+
+            val emailIntent = Intent(Intent.ACTION_SENDTO)
+            emailIntent.data = Uri.parse(mailto)
+            startActivity(emailIntent)
+        }
     }
 
     private fun getindustryvalue(phonenumber: String?) {
@@ -84,7 +96,7 @@ class MeterListScreen : AppCompatActivity() {
                 partList.add(
                     ListTextOnly(
                         jsonInner.getString("meterrefid"),
-                        "Meter No: " + jsonInner.getString("meterno"),
+                        jsonInner.getString("meterno"),
                         "Status:" + jsonInner.getString("status"),
                         false
                     )
@@ -99,7 +111,6 @@ class MeterListScreen : AppCompatActivity() {
     }
 
     private fun partItemClicked(partItem: ListTextOnly) {
-
         datagatherAdapter!!.notifyDataSetChanged()
        val meternumb=partItem.itemName
         if (meternumb=="")
