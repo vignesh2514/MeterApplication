@@ -8,6 +8,7 @@ object SharedPrefUtils {
 
     private const val PREF_NAME= "ineshmeterapp"
     private const val MOBILE_NUMBER = "mobileNumber"
+    private const val USER_NAME = "userName"
 
     private lateinit var mPrefs: SharedPreferences
 
@@ -18,7 +19,7 @@ object SharedPrefUtils {
 
     }
 
-    fun setmobileNumber(mobileNumber: String) {
+    fun setmobileNumber(mobileNumber: String?) {
 
         mPrefs.edit()
             .putString(MOBILE_NUMBER,mobileNumber)
@@ -26,9 +27,26 @@ object SharedPrefUtils {
             .apply()
     }
 
+    fun setuserName(mobileNumber: String?) {
+
+        mPrefs.edit()
+            .putString(USER_NAME,mobileNumber)
+
+            .apply()
+    }
+    fun clearTokens() {
+        mPrefs.edit().remove(MOBILE_NUMBER).remove(MOBILE_NUMBER).apply()
+        mPrefs.edit().clear().apply()
+    }
+
     fun getmobileNumber(): String? {
         return mPrefs.getString(MOBILE_NUMBER, "")
     }
+    fun getuserName(): String? {
+        return mPrefs.getString(USER_NAME, "")
+    }
 
-
+    fun isUserLoggedIn(): Boolean {
+        return mPrefs.getString(MOBILE_NUMBER, "").isNotBlank()
+    }
 }

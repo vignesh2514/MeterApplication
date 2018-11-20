@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="wrap_content"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
               android:id="@+id/layout_back_text"
               android:padding="5dp"
               android:layout_margin="5dp"
+              android:weightSum="2"
               android:background="@drawable/editext_round_white"
               android:layout_height="wrap_content">
 
@@ -15,10 +16,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_normal"
+            android:layout_weight="1.5"
+            android:fontFamily="@font/roboto_medium"
             android:textColor="@android:color/black"
-            android:padding="5dp"
+            android:padding="10dp"
     />
-
+    <TextView
+            android:id="@+id/tv_list_subtext"
+            android:text="@string/app_name"
+            android:layout_weight=".5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_normal"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@android:color/black"
+            android:padding="10dp"
+    />
     <TextView
             android:id="@+id/tv_list_text_id"
             android:visibility="gone"

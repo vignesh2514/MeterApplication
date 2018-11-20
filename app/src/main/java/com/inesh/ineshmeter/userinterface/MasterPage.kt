@@ -7,11 +7,12 @@ import com.inesh.ineshmeter.R
 import kotlinx.android.synthetic.main.activity_master_page.*
 
 class MasterPage : AppCompatActivity() {
+    val meternumber= intent.getStringExtra("meter_num")
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                message.setText(R.string.title_home)
+                message.text = meternumber
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
@@ -31,5 +32,6 @@ class MasterPage : AppCompatActivity() {
         setContentView(R.layout.activity_master_page)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
     }
 }

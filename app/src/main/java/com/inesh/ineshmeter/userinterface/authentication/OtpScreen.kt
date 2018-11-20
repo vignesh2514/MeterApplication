@@ -5,7 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import com.inesh.ineshmeter.R
-import com.inesh.ineshmeter.userinterface.MeterDataGather
+import com.inesh.ineshmeter.globalclass.SharedPrefUtils
+import com.inesh.ineshmeter.userinterface.MeterListScreen
 import com.inesh.ineshmeter.volleyglobal.APIController
 import com.inesh.ineshmeter.volleyglobal.ServiceVolley
 import kotlinx.android.synthetic.main.activity_otp_screen.*
@@ -44,9 +45,14 @@ class OtpScreen : Activity() {
                 {
                     val user_detail= it.getJSONObject("users_detail")
                     val mobile_number=user_detail.getString("mobile_number")
-                    val intent = Intent(this, MeterDataGather::class.java)
+                    val userName=user_detail.getString("userName")
+                    SharedPrefUtils.setmobileNumber(mobile_number)
+                    SharedPrefUtils.setuserName(userName)
+                    val intent = Intent(this, MeterListScreen::class.java)
                     intent.putExtra("mobile_number", mobile_number)
                     startActivity(intent)
+                    finish()
+
                 }
                 else
                 {

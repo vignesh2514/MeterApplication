@@ -49,42 +49,45 @@ class Adapteronlytext  (private val partItemList: List<ListTextOnly>, private va
 
             itemView.tv_list_text.text = part.itemName
             itemView.tv_list_text_id.text = part.id.toString()
+            itemView.tv_list_subtext.text=part.itemSubName
 
-            if (selectedItems != null && selectedItems.size() > 0) {
-
-                if (!selectedItems.get(adapterPosition)) {
-
-                    itemView.layout_back_text.setBackgroundResource(R.drawable.button_fill)
-                    itemView.tv_list_text.setTextColor(Color.BLACK)
-
-                } else {
-                    itemView.tv_list_text.setTextColor(Color.WHITE)
-                    itemView.layout_back_text.setBackgroundResource(R.drawable.editext_round_white)
-                }
-            } else {
-                for (i in 0 until partItemList.size) {
-                    selectedItems!!.put(i, false)
-                }
-            }
+//            if (selectedItems != null && selectedItems.size() > 0) {
+//
+//                if (!selectedItems.get(adapterPosition)) {
+//
+//                    itemView.layout_back_text.setBackgroundResource(R.drawable.button_fill)
+//                    itemView.tv_list_text.setTextColor(Color.WHITE)
+//                    itemView.tv_list_subtext.setTextColor(Color.WHITE)
+//
+//                } else {
+//                    itemView.tv_list_text.setTextColor(Color.BLACK)
+//                    itemView.tv_list_subtext.setTextColor(Color.BLACK)
+//                    itemView.layout_back_text.setBackgroundResource(R.drawable.editext_round_white)
+//                }
+//            } else {
+//                for (i in 0 until partItemList.size) {
+//                    selectedItems!!.put(i, false)
+//                }
+//            }
 
 
             itemView.setOnClickListener {
 
-                if (selectedItems != null) {
-                    for (i in 0 until selectedItems.size()) {
-                        if (i == adapterPosition) {
-                            if (selectedItems.get(i)) {
-                                selectedItems.put(i, false)
-                            } else {
-                                selectedItems.put(i, true)
-                                Log.d("pos", i.toString())
-                                Log.d("posValue", partItemList[i].itemName)
-                            }
-                        } else {
-                            selectedItems.put(i, false)
-                        }
-                    }
-                }
+//                if (selectedItems != null) {
+//                    for (i in 0 until selectedItems.size()) {
+//                        if (i == adapterPosition) {
+//                            if (selectedItems.get(i)) {
+//                                selectedItems.put(i, false)
+//                            } else {
+//                                selectedItems.put(i, true)
+//                                Log.d("pos", i.toString())
+//                                Log.d("posValue", partItemList[i].itemName)
+//                            }
+//                        } else {
+//                            selectedItems.put(i, false)
+//                        }
+//                    }
+//                }
                 clickListener(part)
             }
 

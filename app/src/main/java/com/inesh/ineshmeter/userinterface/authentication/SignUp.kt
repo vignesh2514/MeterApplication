@@ -30,19 +30,22 @@ class SignUp : Activity() {
                     EtName.text.toString(),
                     EtMnum.text.toString(),
                     EtPass.text.toString(),
-                    EtMeterNum.text.toString()
+                    EtMeterNum.text.toString(),
+                    EtEmail.text.toString()
                 )
 
             }
         }
     }
 
-    private fun startsignupapicall(name: String, mobilenum: String, pass: String, meternumber: String) {
+    private fun startsignupapicall(name: String, mobilenum: String, pass: String, meternumber: String,email: String) {
 
         params.put("smobile_num", mobilenum)
         params.put("smeternum", meternumber)
         params.put("spass", pass)
-        params.put("name", name)
+        params.put("sname", name)
+        params.put("semail", email)
+
 
         apiController.post(login_app, params) {
             try {
