@@ -110,6 +110,7 @@ class MeterListScreen : AppCompatActivity() {
 
     }
 
+
     private fun partItemClicked(partItem: ListTextOnly) {
         datagatherAdapter!!.notifyDataSetChanged()
        val meternumb=partItem.itemName
@@ -127,6 +128,7 @@ class MeterListScreen : AppCompatActivity() {
         }
 
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu to use in the action bar
         val inflater = menuInflater

@@ -25,6 +25,8 @@ class MasterPage : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
+                val meterFragment = Monthreport.newInstance()
+                openFragment(meterFragment)
                 return@OnNavigationItemSelectedListener true
             }
         }

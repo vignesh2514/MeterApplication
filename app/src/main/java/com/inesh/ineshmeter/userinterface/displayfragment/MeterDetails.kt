@@ -36,6 +36,7 @@ class MeterDetails : Fragment() {
         // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_meter_details, container, false)
        val  meter_num = arguments!!.getString("meter_num")
+SharedPrefUtils.setmeterno(meter_num)
         startapicall(meter_num,view)
 
         return view

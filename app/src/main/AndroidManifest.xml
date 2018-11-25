@@ -42,6 +42,15 @@
                 android:label="@string/title_activity_dummy"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+                android:name=".userinterface.Dayreport"
+                android:label="@string/title_activity_dayreport"
+                android:parentActivityName=".userinterface.displayfragment.MasterPage"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.inesh.ineshmeter.userinterface.displayfragment.MasterPage"/>
+        </activity>
     </application>
 
 </manifest>
