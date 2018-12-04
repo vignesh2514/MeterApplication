@@ -12,9 +12,7 @@ class MasterPage : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
 
-            R.id.navigation_dashboard -> {
-                return@OnNavigationItemSelectedListener true
-            }
+
             R.id.navigation_home -> {
                 val meternumber= intent.getStringExtra("meter_num")
                 val bundle = Bundle()

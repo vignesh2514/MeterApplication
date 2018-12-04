@@ -13,7 +13,8 @@ import org.json.JSONObject
 //service request
 class ServiceVolley : ServiceInterface {
     val TAG = ServiceVolley::class.java.simpleName
-val basepath="http://www.smarte.co.in/dinesh_testing/"
+val basepath="http:118.91.232.232:89/aac/"  //kali home smart meter//
+    //"http://www.smarte.co.in/dinesh_testing/"// sample schema in phpmy admin//
 
     override fun post(path: String, params: JSONObject, completionHandler: (response: JSONObject?) -> Unit) {
         val jsonObjReq = object : JsonObjectRequest(Method.POST, basepath+ path, params,

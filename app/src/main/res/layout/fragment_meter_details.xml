@@ -20,11 +20,11 @@
 
 
         <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:padding="10dp"
-                    android:weightSum="2"
-                          android:layout_height="80dp">
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:weightSum="2"
+                android:layout_height="65dp">
 
 
             <ImageView
@@ -42,24 +42,28 @@
                     android:layout_height="match_parent">
 
                 <TextView
-                        android:text="System RTC"
+                        android:text="---System RTC---"
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@android:color/holo_green_light"
                         android:id="@+id/textView2" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textSize="16sp"
+                        android:textSize="10sp"
 
                 />
                 <TextView
                         android:text="Loading..."
+                        android:background="@color/colorPrimaryDark"
                         android:layout_width="match_parent"
+                        android:gravity="center"
                         android:layout_height="wrap_content" android:id="@+id/TvSysRtc" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
                 />
             </LinearLayout>
-            </LinearLayout>
+        </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
@@ -78,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:weightSum="2"
-                android:layout_height="80dp">
+                android:layout_height="65dp">
 
 
             <ImageView
@@ -96,21 +100,25 @@
                     android:layout_height="match_parent">
 
                 <TextView
-                        android:text="Meter RTC"
+                        android:text="---Meter RTC---"
+                        android:gravity="center"
+                        android:background="@android:color/holo_green_light"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/mdt2" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textSize="16sp"
+                        android:textSize="10sp"
 
                 />
                 <TextView
                         android:text="Loading..."
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/TvMeterRtc" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
                 />
             </LinearLayout>
         </LinearLayout>
@@ -133,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:weightSum="2"
-                android:layout_height="80dp">
+                android:layout_height="65dp">
 
 
             <ImageView
@@ -151,21 +159,25 @@
                     android:layout_height="match_parent">
 
                 <TextView
-                        android:text="Ist Voltage"
+                        android:text="---Voltage---"
+                        android:gravity="center"
+                        android:background="@android:color/holo_green_light"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/mdt3" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textSize="16sp"
+                        android:textSize="10sp"
 
                 />
                 <TextView
                         android:text="Loading..."
+                        android:gravity="center"
+                        android:background="@color/colorPrimaryDark"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/TvIstV" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
                 />
             </LinearLayout>
         </LinearLayout>
@@ -186,7 +198,7 @@
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:weightSum="2"
-                android:layout_height="80dp">
+                android:layout_height="65dp">
 
 
             <ImageView
@@ -204,21 +216,25 @@
                     android:layout_height="match_parent">
 
                 <TextView
-                        android:text="Ist Current"
+                        android:text="---Current---"
+                        android:gravity="center"
+                        android:background="@android:color/holo_green_light"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/mdt4" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textSize="16sp"
+                        android:textSize="10sp"
 
                 />
                 <TextView
                         android:text="Loading..."
+                        android:gravity="center"
+                        android:background="@color/colorPrimaryDark"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/TvIstC" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
                 />
             </LinearLayout>
         </LinearLayout>
@@ -240,7 +256,7 @@
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:weightSum="2"
-                android:layout_height="80dp">
+                android:layout_height="65dp">
 
 
             <ImageView
@@ -258,21 +274,25 @@
                     android:layout_height="match_parent">
 
                 <TextView
-                        android:text="Kw"
+                        android:text="---Kw---"
+                        android:gravity="center"
+                        android:background="@android:color/holo_green_light"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/mdt5" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textSize="16sp"
+                        android:textSize="10sp"
 
                 />
                 <TextView
                         android:text="Loading..."
+                        android:gravity="center"
+                        android:background="@color/colorPrimaryDark"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/TvKw" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
                 />
             </LinearLayout>
         </LinearLayout>
@@ -294,7 +314,7 @@
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:weightSum="2"
-                android:layout_height="80dp">
+                android:layout_height="65dp">
 
 
             <ImageView
@@ -312,21 +332,25 @@
                     android:layout_height="match_parent">
 
                 <TextView
-                        android:text="Kwh"
+                        android:text="---Kwh---"
+                        android:gravity="center"
+                        android:background="@android:color/holo_green_light"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/mdt6" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textSize="16sp"
+                        android:textSize="10sp"
 
                 />
                 <TextView
                         android:text="Loading..."
+                        android:gravity="center"
+                        android:background="@color/colorPrimaryDark"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/TvKwh" android:layout_weight="1"
                         android:fontFamily="@font/roboto_medium"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
                 />
             </LinearLayout>
         </LinearLayout>
