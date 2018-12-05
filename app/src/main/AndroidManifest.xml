@@ -51,6 +51,10 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.inesh.ineshmeter.userinterface.displayfragment.MasterPage"/>
         </activity>
+        <activity android:name=".userinterface.CategoriesScreen">
+        </activity>
+        <activity android:name=".userinterface.GauageScreen">
+        </activity>
     </application>
 
 </manifest>

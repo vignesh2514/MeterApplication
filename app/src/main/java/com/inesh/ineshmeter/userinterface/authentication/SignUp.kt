@@ -1,6 +1,7 @@
 package com.inesh.ineshmeter.userinterface.authentication
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -15,14 +16,21 @@ class SignUp : Activity() {
     val service = ServiceVolley()
     val apiController = APIController(service)
     val params = JSONObject()
+    private var progressDialog: ProgressDialog? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+        progressDialog=ProgressDialog (this@SignUp)
 
+        progressDialog!!.setMessage("Loading Please Wait")
 
         Bsignup.setOnClickListener {
+            progressDialog!!.show()
+
 
             if (EtName.text.isEmpty() && EtMnum.text.isEmpty() && EtPass.text.isEmpty() && Etrepass.text.isEmpty() && EtMeterNum.text.isEmpty()) {
+                progressDialog!!.dismiss()
+
                 Toast.makeText(this@SignUp, "Please Fill all fields", Toast.LENGTH_SHORT).show()
 
             } else {
@@ -54,6 +62,8 @@ class SignUp : Activity() {
 
         apiController.post(login_app, params) {
             try {
+                progressDialog!!.dismiss()
+
                 val exits= it!!.getBoolean("exits")
                 if (exits)
                 {

@@ -1,6 +1,7 @@
 package com.inesh.ineshmeter.userinterface.authentication
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -17,15 +18,32 @@ class Login : Activity() {
     val service = ServiceVolley()
     val apiController = APIController(service)
     val params = JSONObject()
+    private var progressDialog: ProgressDialog? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        Blogin.setOnClickListener {
 
-startapicall(EtMobileNumber.text.toString(),EtPassword.text.toString())
+         progressDialog=ProgressDialog (this@Login)
+
+       progressDialog!!.setMessage("Loading Please Wait")
+        Blogin.setOnClickListener {
+progressDialog!!.show()
+            if(EtMobileNumber.text.toString().isEmpty()&&EtPassword.text.toString().isEmpty())
+            {
+                progressDialog!!.dismiss()
+
+                Toast.makeText(this@Login, "Enter Valid Mobile NUmber and Password", Toast.LENGTH_SHORT).show()
+
+            }
+            else
+            {
+                startapicall(EtMobileNumber.text.toString(),EtPassword.text.toString())
+
+            }
         }
 
         TvSignup.setOnClickListener {
+
             startActivity(Intent(this@Login, SignUp::class.java))
         }
     }
@@ -36,6 +54,8 @@ startapicall(EtMobileNumber.text.toString(),EtPassword.text.toString())
 
 
         apiController.post(login_app, params) {
+            progressDialog!!.dismiss()
+
             try {
                 val exits= it!!.getBoolean("exits")
 

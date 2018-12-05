@@ -122,7 +122,7 @@ class MeterListScreen : AppCompatActivity() {
         else
         {
             Toast.makeText(this@MeterListScreen, meternumb, Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, MasterPage::class.java)
+            val intent = Intent(this, CategoriesScreen::class.java)
             intent.putExtra("meter_num", meternumb)
             startActivity(intent)
         }
