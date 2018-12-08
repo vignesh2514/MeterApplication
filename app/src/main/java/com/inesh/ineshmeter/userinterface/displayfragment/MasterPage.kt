@@ -11,8 +11,6 @@ class MasterPage : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-
-
             R.id.navigation_home -> {
                 val meternumber= intent.getStringExtra("meter_num")
                 val bundle = Bundle()
@@ -34,7 +32,6 @@ class MasterPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_master_page)
-
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
     }

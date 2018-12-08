@@ -30,9 +30,8 @@
         </activity>
         <activity android:name=".userinterface.authentication.OtpScreen">
         </activity>
-        <activity android:name=".userinterface.MeterDataGather">
-        </activity>
-
+        <!-- <activity android:name=".userinterface.MeterDataGather"> -->
+        <!-- </activity> -->
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts"/>
@@ -54,6 +53,20 @@
         <activity android:name=".userinterface.CategoriesScreen">
         </activity>
         <activity android:name=".userinterface.GauageScreen">
+        </activity>
+        <activity
+                android:name=".userinterface.Consumption"
+                android:label="@string/title_activity_consumption"
+                android:parentActivityName=".userinterface.CategoriesScreen"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.inesh.ineshmeter.userinterface.CategoriesScreen"/>
+        </activity>
+        <activity
+                android:name=".userinterface.PaymentScreen"
+                android:label="@string/title_activity_payment_screen"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

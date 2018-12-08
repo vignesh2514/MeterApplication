@@ -48,7 +48,7 @@ class Adaptermultitext (private val partItemList: List<Listmultitext>, private v
             itemView.tv_list_text_id.text = part.id.toString()
             itemView.tv_list_subtext.text=part.itemSubName
             itemView.tv_list_subtext2.text=part.itemSubNam
-            //itemView.tv_list_subtext3.text=part.itemSubNa//
+           itemView.tv_list_subtext3.text=part.itemSubNa
 
 
 

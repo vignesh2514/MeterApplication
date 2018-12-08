@@ -2,11 +2,10 @@ package com.inesh.ineshmeter.userinterface
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.inesh.ineshmeter.R
 import com.inesh.ineshmeter.volleyglobal.APIController
 import com.inesh.ineshmeter.volleyglobal.ServiceVolley
-import kotlinx.android.synthetic.main.fragment_meter_details.*
+import kotlinx.android.synthetic.main.activity_gauage_screen.*
 import org.json.JSONObject
 
 class GauageScreen : AppCompatActivity() {
@@ -38,24 +37,29 @@ class GauageScreen : AppCompatActivity() {
                     val systemrtc=meterdetail.getString("systemrtc")
                     val meterrtc=meterdetail.getString("meterrtc")
                     val rv=meterdetail.getString("rv")
+                    smRV.setSpeed(rv.toFloat())
+
                     val yv=meterdetail.getString("yv")
+                    smYV.setSpeed((yv.toFloat()))
                     val bv=meterdetail.getString("bv")
+                    smBV.setSpeed(bv.toFloat())
                     val kw=meterdetail.getString("kw")
                     val mdkw=meterdetail.getString("mdkw")
                     val kwh=meterdetail.getString("kwh")
                     val rc=meterdetail.getString("rc")
+                    smRC.setSpeed(rc.toFloat())
                     val yc=meterdetail.getString("yc")
+                    smYC.setSpeed(yc.toFloat())
                     val bc=meterdetail.getString("bc")
+                    smBC.setSpeed(bc.toFloat())
+                    smKVA1.setSpeed(bc.toFloat())
+                    smKVA2.setSpeed(bc.toFloat())
+                    smKVA3.setSpeed(bc.toFloat())
                     val instant=meterdetail.getString("instant")
                     val freq=meterdetail.getString("freq")
                     val kvah=meterdetail.getString("kvah")
 
-                    TvSysRtc.text=systemrtc
-                    TvMeterRtc.text=meterrtc
-                    TvIstV.text="R- $rv Y- $yv B- $bv"
-                    TvIstC.text="R- $rc Y- $yc B- $bc"
-                    TvKw.text=kw
-                    TvKwh.text=kwh
+
 
 
 
